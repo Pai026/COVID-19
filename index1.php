@@ -27,7 +27,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_0fad45d5334e4484afd0ea197a3e80c1 {
+                #map_2bb937fd274f4f44b0212a0065045caf {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -47,17 +47,15 @@
               <canvas id="demo-canvas"></canvas>
               <h1 class="main-title"><span class="thin">Covid</span>-19<br></h1>
            </div>
-           <center><button onClick="window.location.href='./Data/output.xlsx'" type="button" class="btn btn-primary btn-lg btn-block">Click here For dataset</button></center>
-           <center><button onclick="window.location.href='./index1.php'" type="button" class="btn btn-primary btn-lg btn-block">Click here For Statewise Map</button></center>
+           <center><button onClick="window.location.href='./Data/output1.xlsx'" type="button" class="btn btn-primary btn-lg btn-block">Click here For dataset</button></center>
+           <center><button onclick="window.location.href='./index.php'" type="button" class="btn btn-primary btn-lg btn-block">Click here For Countrywise Map</button></center>
         </div>
     
      </div>
-            <?php include("index.html"); ?>
+    
+            <?php include("index1.html")?>
         
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js" integrity="sha256-36hEPcG8mKookfvUVvEqRkpdYV1unP6wvxIqbgdeVhk=" crossorigin="anonymous"></script>
-
-
 
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js'></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js'></script>

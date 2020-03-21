@@ -47,7 +47,7 @@
               <canvas id="demo-canvas"></canvas>
               <h1 class="main-title"><span class="thin">Covid</span>-19<br></h1>
            </div>
-           <center><button onClick="window.location.href='./Data/output.xlsx'" type="button" class="btn btn-primary btn-lg btn-block">Click here For dataset</button></center>
+           <center><button onClick="window.location.href='https://github.com/CSSEGISandData/COVID-19'" type="button" class="btn btn-primary btn-lg btn-block">Click here For dataset</button></center>
            <center><button onclick="window.location.href='./index1.php'" type="button" class="btn btn-primary btn-lg btn-block">Click here For Statewise Map</button></center>
         </div>
     

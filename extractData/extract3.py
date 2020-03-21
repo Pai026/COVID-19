@@ -17,11 +17,11 @@ for idx, row in data.iterrows():
     coords,popups=[],[]
     if (str(row['Province/State'])!="nan"):
             location=[row['Latitude'],row['Longitude']]
-            popup='<STRONG>'+str(row['Province/State'])+'<br>'+'Confirmed-'+str(row['Confirmed'])+'<br>'+'Deaths-'+str(row['Deaths'])+'<br>'+'Recovered-'+str(row['Recovered'])+'</STRONG>'
+            popup='<STRONG>'+'<h3>'+str(row['Province/State'])+'</h3>'+'<br>'+'<p>'+'Confirmed-'+str(row['Confirmed'])+'<br>'+'Deaths-'+str(row['Deaths'])+'<br>'+'Recovered-'+str(row['Recovered'])+'</p>'+'</STRONG>'
             mc.add_child(Marker(location=location,popup=popup))
     else:
         location=[row['Latitude'],row['Longitude']]
-        popup='<STRONG>'+row['Country/Region']+'<br>'+'Confirmed-'+str(row['Confirmed'])+'<br>'+'Deaths-'+str(row['Deaths'])+'<br>'+'Recovered-'+str(row['Recovered'])+'</STRONG>'
+        popup='<STRONG>'+'<h3>'+row['Country/Region']+'</h3>'+'<br>'+'<p>'+'Confirmed-'+str(row['Confirmed'])+'<br>'+'Deaths-'+str(row['Deaths'])+'<br>'+'Recovered-'+str(row['Recovered'])+'</p>'+'</STRONG>'
         mc.add_child(Marker(location=location,popup=popup))    
         
 

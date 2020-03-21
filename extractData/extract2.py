@@ -27,7 +27,7 @@ mc = MarkerCluster()
 for idx, row in merged.iterrows():
     if not math.isnan(row['cases']) and not math.isnan(row['cases']):
         location=[row['LAT'],row['LON']]
-        popup='<STRONG>'+'State '+row['province']+'<br>'+'Confirmed Indian National-'+str(int((row['Indian'])))+'<br>'+'Confirmed Foreign National-'+str(int((row['Foreign'])))+'<br>'+'Deaths-'+str(int((row['deaths_y'])))+'<br>'+'Discharged-'+str(int(row['discharged_y']))+'<br>'+'Helpline-'+str(row['helpline'])+'</STRONG>'
+        popup='<STRONG>'+'<h3>'+row['province']+'</h3>'+'<br>'+'<p>'+'Confirmed Indian National-'+str(int((row['Indian'])))+'</p>'+'<br>'+'<p>'+'Confirmed Foreign National-'+str(int((row['Foreign'])))+'</p>'+'<br>'+'<p>'+'Deaths-'+str(int((row['deaths_y'])))+'</p>'+'<br>'+'<p>'+'Discharged-'+str(int(row['discharged_y']))+'</p>'+'<br>'+'<p>'+'Helpline-'+str(row['helpline'])+'</p>'+'</STRONG>'
         mc.add_child(Marker(location=location,popup=popup))
 
 m_3.add_child(mc)

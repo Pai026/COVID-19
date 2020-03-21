@@ -10,6 +10,6 @@
 - [CSSEGISandData](https://github.com/CSSEGISandData/COVID-19)
 - [Data for Indian states](https://exec.clay.run/kunksed/mohfw-covid) by [Raj Kunkolienkar](https://twitter.com/kunksed)
 - [Data for Indian States](https://api.rootnet.in/covid19-in/stats/latest) by [Amod Malviya](https://twitter.com/amodm)
-- [Data for India States](https://www.mohfw.gov.in/) from [Ministry of Health and Family Welfare]
+- [Ministry of Health and Family Welfare](https://www.mohfw.gov.in/)
 ## Inspired From
   # https://github.com/localeai/covid19-live-visualization

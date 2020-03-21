@@ -12,6 +12,7 @@ import json
 fp = "/home/acer/Desktop/covid-19/world_border/TM_WORLD_BORDERS-0.3.shp"
 #reading the file stored in variable fp
 map_df = gpd.read_file(fp)
+print(map_df['NAME'])
 # check data type so we can see that this is not a normal dataframe, but a GEOdataframe
 #map_df.head()
 
@@ -39,23 +40,7 @@ df1.to_excel("../Data/output.xlsx")
 merged = map_df.merge(df_new, on='NAME', how='left')
 print(merged.head())
 
-variable='Cases'
-vmin, vmax = 0, 80000
 
-fig, ax = plt.subplots(1, figsize=(10, 6))
-
-merged.plot(column=variable, cmap='BuGn', linewidth=0.5, ax=ax, edgecolor='0.5')
-#plt.show()
-
-# remove the axis
-ax.axis("off")# add a title
-ax.set_title("Covid-19-Confirmed Cases", fontdict={"fontsize": "25", "fontweight" : "3"})# create an annotation for the data source
-ax.annotate("Source: European Centre for Disease Prevention and Control , 2020",xy=(0.1, .08), xycoords="figure fraction", horizontalalignment="left", verticalalignment="top", fontsize=12, color="#555555")
-
-sm = plt.cm.ScalarMappable(cmap="BuGn", norm=plt.Normalize(vmin=vmin, vmax=vmax))# empty array for the data range
-sm._A = []# add the colorbar to the figure
-cbar = fig.colorbar(sm)#saving our map as .png file.
-fig.savefig("map_export.png", dpi=300)
 
 m_3 = folium.Map(location=[20.5937,78.9629], tiles='cartodbpositron', zoom_start=2)
 

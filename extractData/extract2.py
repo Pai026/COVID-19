@@ -21,13 +21,13 @@ df2=df2.fillna(0)
 df2.to_excel("../Data/output1.xlsx") 
 merged = country_geo.merge(df1, on='province') 
 
-m_3 = folium.Map(location=[20.5937,78.9629], tiles='cartodbpositron', zoom_start=2)
+m_3 = folium.Map(location=[20.5937,78.9629], tiles='CartoDB dark_matter', zoom_start=2)
 
 mc = MarkerCluster()
 for idx, row in merged.iterrows():
     if not math.isnan(row['cases']) and not math.isnan(row['cases']):
         location=[row['LAT'],row['LON']]
-        popup='<STRONG>'+'<h3>'+row['province']+'</h3>'+'<br>'+'<p>'+'Confirmed Indian National-'+str(int((row['Indian'])))+'</p>'+'<br>'+'<p>'+'Confirmed Foreign National-'+str(int((row['Foreign'])))+'</p>'+'<br>'+'<p>'+'Deaths-'+str(int((row['deaths_y'])))+'</p>'+'<br>'+'<p>'+'Discharged-'+str(int(row['discharged_y']))+'</p>'+'<br>'+'<p>'+'Helpline-'+str(row['helpline'])+'</p>'+'</STRONG>'
+        popup='<div style="width:300">'+'<STRONG>'+'<h3>'+row['province']+'</h3>'+'<br>'+'<p>'+'Confirmed Indian National-'+str(int((row['Indian'])))+'</p>'+'<br>'+'<p>'+'Confirmed Foreign National-'+str(int((row['Foreign'])))+'</p>'+'<br>'+'<p>'+'Deaths-'+str(int((row['deaths_y'])))+'</p>'+'<br>'+'<p>'+'Discharged-'+str(int(row['discharged_y']))+'</p>'+'<br>'+'<p>'+'Helpline-'+str(row['helpline'])+'</p>'+'</STRONG>'+'</div>'
         mc.add_child(Marker(location=location,popup=popup))
 
 m_3.add_child(mc)
